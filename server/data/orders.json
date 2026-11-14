@@ -1,0 +1,227 @@
+[
+  {
+    "photo": "",
+    "name": "Sample Customer 001",
+    "address": "Example Road 1, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 002",
+    "address": "Example Road 2, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 003",
+    "address": "Example Road 3, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 004",
+    "address": "Example Road 4, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 005",
+    "address": "Example Road 5, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 006",
+    "address": "Example Road 6, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 007",
+    "address": "Example Road 7, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 008",
+    "address": "Example Road 8, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 009",
+    "address": "Example Road 9, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 010",
+    "address": "Example Road 10, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 011",
+    "address": "Example Road 11, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 012",
+    "address": "Example Road 12, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 013",
+    "address": "Example Road 13, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 014",
+    "address": "Example Road 14, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 015",
+    "address": "Example Road 15, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 016",
+    "address": "Example Road 16, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 017",
+    "address": "Example Road 17, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 018",
+    "address": "Example Road 18, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 019",
+    "address": "Example Road 19, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 020",
+    "address": "Example Road 20, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 021",
+    "address": "Example Road 21, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 022",
+    "address": "Example Road 22, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 023",
+    "address": "Example Road 23, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 024",
+    "address": "Example Road 24, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  },
+  {
+    "photo": "",
+    "name": "Sample Customer 025",
+    "address": "Example Road 25, Sample City",
+    "products": "Sample medicine",
+    "price": 0,
+    "status": "Pending",
+    "order_date": "2024-01-01"
+  }
+]

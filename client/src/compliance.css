@@ -1,0 +1,31 @@
+.icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  vertical-align: middle;
+}
+
+.cart-shortcut .icon { width: 19px; height: 19px; }
+.menu-toggle .icon { width: 24px; height: 24px; }
+.store-score .icon { width: 16px; height: 16px; }
+.store-loc .icon, .store-phone .icon { width: 18px; height: 18px; }
+.socials .icon { width: 28px; height: 28px; }
+.features .icon { width: 16px; height: 16px; }
+.search-wrap .icon { position: absolute; right: 15px; width: 18px; height: 18px; color: #252539; pointer-events: none; }
+.filter-btn .icon { width: 16px; height: 16px; }
+.product-rating { display: flex; align-items: center; gap: 6px; margin: -8px 0 18px; color: #d89c18; font-size: 13px; }
+.product-rating .icon { width: 16px; height: 16px; }
+.product-rating span { color: var(--gray); }
+.product-reviews .empty-reviews { padding: 40px 0; color: var(--gray); }
+.cart-product-desc small { display: block; margin: -12px 0 12px; color: var(--gray); font-size: 11px; }
+.auth-form label .field-error { margin: 5px 8px 0; }
+.auth-pending { min-height: 50vh; display: grid; place-items: center; color: var(--gray); }
+
+@media (max-width: 767px) {
+  .store-loc .icon, .store-phone .icon { width: 15px; height: 15px; }
+  .features .icon { width: 12px; height: 12px; }
+  .socials .icon { width: 17px; height: 17px; }
+  .product-rating { margin: -6px 0 14px; font-size: 11px; }
+  .cart-product-desc small { margin: -4px 0 6px; font-size: 9px; }
+}

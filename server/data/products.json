@@ -1,0 +1,547 @@
+[
+  {
+    "id": "0",
+    "photo": "/assets/products/0.svg?v=1",
+    "name": "Aspirin",
+    "suppliers": "Square",
+    "stock": "12",
+    "price": "89.66",
+    "category": "Medicine"
+  },
+  {
+    "id": "1",
+    "photo": "/assets/products/1.svg?v=1",
+    "name": "Paracetamol",
+    "suppliers": "Acme",
+    "stock": "19",
+    "price": "34.16",
+    "category": "Heart"
+  },
+  {
+    "id": "2",
+    "photo": "/assets/products/2.svg?v=1",
+    "name": "Ibuprofen",
+    "suppliers": "Beximco",
+    "stock": "09",
+    "price": "53.76",
+    "category": "Head"
+  },
+  {
+    "id": "3",
+    "photo": "/assets/products/3.svg?v=1",
+    "name": "Acetaminophen",
+    "suppliers": "ACI",
+    "stock": "14",
+    "price": "28.57",
+    "category": "Hand"
+  },
+  {
+    "id": "4",
+    "photo": "/assets/products/4.svg?v=1",
+    "name": "Naproxen",
+    "suppliers": "Uniliver",
+    "stock": "10",
+    "price": "56.34",
+    "category": "Leg"
+  },
+  {
+    "id": "5",
+    "photo": "/assets/products/5.svg?v=1",
+    "name": "Amoxicillin",
+    "suppliers": "Square",
+    "stock": "25",
+    "price": "45.99",
+    "category": "Medicine"
+  },
+  {
+    "id": "6",
+    "photo": "/assets/products/6.svg?v=1",
+    "name": "Lisinopril",
+    "suppliers": "Acme",
+    "stock": "17",
+    "price": "29.88",
+    "category": "Heart"
+  },
+  {
+    "id": "7",
+    "photo": "/assets/products/7.svg?v=1",
+    "name": "Ciprofloxacin",
+    "suppliers": "Beximco",
+    "stock": "11",
+    "price": "38.45",
+    "category": "Head"
+  },
+  {
+    "id": "8",
+    "photo": "/assets/products/8.svg?v=1",
+    "name": "Hydrochlorothiazide",
+    "suppliers": "ACI",
+    "stock": "22",
+    "price": "24.76",
+    "category": "Hand"
+  },
+  {
+    "id": "9",
+    "photo": "/assets/products/9.svg?v=1",
+    "name": "Prednisone",
+    "suppliers": "Uniliver",
+    "stock": "15",
+    "price": "48.99",
+    "category": "Leg"
+  },
+  {
+    "id": "10",
+    "photo": "/assets/products/10.svg?v=1",
+    "name": "Propranolol",
+    "suppliers": "Square",
+    "stock": "18",
+    "price": "35.66",
+    "category": "Medicine"
+  },
+  {
+    "id": "11",
+    "photo": "/assets/products/11.svg?v=1",
+    "name": "Omeprazole",
+    "suppliers": "Acme",
+    "stock": "14",
+    "price": "42.16",
+    "category": "Heart"
+  },
+  {
+    "id": "12",
+    "photo": "/assets/products/12.svg?v=1",
+    "name": "Diazepam",
+    "suppliers": "Beximco",
+    "stock": "08",
+    "price": "27.76",
+    "category": "Head"
+  },
+  {
+    "id": "13",
+    "photo": "/assets/products/13.svg?v=1",
+    "name": "Simvastatin",
+    "suppliers": "ACI",
+    "stock": "30",
+    "price": "18.57",
+    "category": "Hand"
+  },
+  {
+    "id": "14",
+    "photo": "/assets/products/14.svg?v=1",
+    "name": "Tramadol",
+    "suppliers": "Uniliver",
+    "stock": "13",
+    "price": "52.34",
+    "category": "Leg"
+  },
+  {
+    "id": "15",
+    "photo": "/assets/products/15.svg?v=1",
+    "name": "Losartan",
+    "suppliers": "Square",
+    "stock": "20",
+    "price": "31.99",
+    "category": "Medicine"
+  },
+  {
+    "id": "16",
+    "photo": "/assets/products/16.svg?v=1",
+    "name": "Metformin",
+    "suppliers": "Acme",
+    "stock": "12",
+    "price": "22.88",
+    "category": "Heart"
+  },
+  {
+    "id": "17",
+    "photo": "/assets/products/17.svg?v=1",
+    "name": "Alprazolam",
+    "suppliers": "Beximco",
+    "stock": "09",
+    "price": "47.76",
+    "category": "Head"
+  },
+  {
+    "id": "18",
+    "photo": "/assets/products/18.svg?v=1",
+    "name": "Atorvastatin",
+    "suppliers": "ACI",
+    "stock": "18",
+    "price": "19.57",
+    "category": "Hand"
+  },
+  {
+    "id": "19",
+    "photo": "/assets/products/19.svg?v=1",
+    "name": "Zolpidem",
+    "suppliers": "Uniliver",
+    "stock": "16",
+    "price": "41.34",
+    "category": "Leg"
+  },
+  {
+    "id": "20",
+    "photo": "/assets/products/20.svg?v=1",
+    "name": "Folic Acid",
+    "suppliers": "Square",
+    "stock": "14",
+    "price": "15.66",
+    "category": "Medicine"
+  },
+  {
+    "id": "21",
+    "photo": "/assets/products/21.svg?v=1",
+    "name": "Calcium Carbonate",
+    "suppliers": "Acme",
+    "stock": "21",
+    "price": "18.16",
+    "category": "Heart"
+  },
+  {
+    "id": "22",
+    "photo": "/assets/products/22.svg?v=1",
+    "name": "Vitamin D",
+    "suppliers": "Beximco",
+    "stock": "16",
+    "price": "12.76",
+    "category": "Head"
+  },
+  {
+    "id": "23",
+    "photo": "/assets/products/23.svg?v=1",
+    "name": "Fish Oil",
+    "suppliers": "ACI",
+    "stock": "25",
+    "price": "23.57",
+    "category": "Hand"
+  },
+  {
+    "id": "24",
+    "photo": "/assets/products/24.svg?v=1",
+    "name": "Multivitamins",
+    "suppliers": "Uniliver",
+    "stock": "19",
+    "price": "17.34",
+    "category": "Leg"
+  },
+  {
+    "id": "25",
+    "photo": "/assets/products/25.svg?v=1",
+    "name": "Toothpaste",
+    "suppliers": "Square",
+    "stock": "30",
+    "price": "6.66",
+    "category": "Dental Care"
+  },
+  {
+    "id": "26",
+    "photo": "/assets/products/26.svg?v=1",
+    "name": "Mouthwash",
+    "suppliers": "Acme",
+    "stock": "25",
+    "price": "8.16",
+    "category": "Dental Care"
+  },
+  {
+    "id": "27",
+    "photo": "/assets/products/27.svg?v=1",
+    "name": "Toothbrush",
+    "suppliers": "Beximco",
+    "stock": "20",
+    "price": "4.76",
+    "category": "Dental Care"
+  },
+  {
+    "id": "28",
+    "photo": "/assets/products/28.svg?v=1",
+    "name": "Facial Cleanser",
+    "suppliers": "ACI",
+    "stock": "14",
+    "price": "11.57",
+    "category": "Skin Care"
+  },
+  {
+    "id": "29",
+    "photo": "/assets/products/29.svg?v=1",
+    "name": "Moisturizer",
+    "suppliers": "Uniliver",
+    "stock": "18",
+    "price": "13.34",
+    "category": "Skin Care"
+  },
+  {
+    "id": "30",
+    "photo": "/assets/products/30.svg?v=1",
+    "name": "Aspirin",
+    "suppliers": "Square",
+    "stock": "12",
+    "price": "89.66",
+    "category": "Medicine",
+    "duplicateOf": "0"
+  },
+  {
+    "id": "31",
+    "photo": "/assets/products/31.svg?v=1",
+    "name": "Paracetamol",
+    "suppliers": "Acme",
+    "stock": "19",
+    "price": "34.16",
+    "category": "Heart",
+    "duplicateOf": "1"
+  },
+  {
+    "id": "32",
+    "photo": "/assets/products/32.svg?v=1",
+    "name": "Ibuprofen",
+    "suppliers": "Beximco",
+    "stock": "09",
+    "price": "53.76",
+    "category": "Head",
+    "duplicateOf": "2"
+  },
+  {
+    "id": "33",
+    "photo": "/assets/products/33.svg?v=1",
+    "name": "Acetaminophen",
+    "suppliers": "ACI",
+    "stock": "14",
+    "price": "28.57",
+    "category": "Hand",
+    "duplicateOf": "3"
+  },
+  {
+    "id": "34",
+    "photo": "/assets/products/34.svg?v=1",
+    "name": "Naproxen",
+    "suppliers": "Uniliver",
+    "stock": "10",
+    "price": "56.34",
+    "category": "Leg",
+    "duplicateOf": "4"
+  },
+  {
+    "id": "35",
+    "photo": "/assets/products/35.svg?v=1",
+    "name": "Loratadine",
+    "suppliers": "Square",
+    "stock": "17",
+    "price": "120.45",
+    "category": "Medicine"
+  },
+  {
+    "id": "36",
+    "photo": "/assets/products/36.svg?v=1",
+    "name": "Atorvastatin",
+    "suppliers": "Acme",
+    "stock": "8",
+    "price": "65.99",
+    "category": "Heart"
+  },
+  {
+    "id": "37",
+    "photo": "/assets/products/37.svg?v=1",
+    "name": "Omeprazole",
+    "suppliers": "Beximco",
+    "stock": "14",
+    "price": "45.75",
+    "category": "Head"
+  },
+  {
+    "id": "38",
+    "photo": "/assets/products/38.svg?v=1",
+    "name": "Simvastatin",
+    "suppliers": "ACI",
+    "stock": "22",
+    "price": "75.34",
+    "category": "Hand"
+  },
+  {
+    "id": "39",
+    "photo": "/assets/products/39.svg?v=1",
+    "name": "Metformin",
+    "suppliers": "Uniliver",
+    "stock": "11",
+    "price": "39.99",
+    "category": "Leg"
+  },
+  {
+    "id": "40",
+    "photo": "/assets/products/40.svg?v=1",
+    "name": "Warfarin",
+    "suppliers": "Square",
+    "stock": "15",
+    "price": "52.88",
+    "category": "Medicine"
+  },
+  {
+    "id": "41",
+    "photo": "/assets/products/41.svg?v=1",
+    "name": "Fluoxetine",
+    "suppliers": "Acme",
+    "stock": "20",
+    "price": "78.45",
+    "category": "Heart"
+  },
+  {
+    "id": "42",
+    "photo": "/assets/products/42.svg?v=1",
+    "name": "Lisinopril",
+    "suppliers": "Beximco",
+    "stock": "9",
+    "price": "32.99",
+    "category": "Head"
+  },
+  {
+    "id": "43",
+    "photo": "/assets/products/43.svg?v=1",
+    "name": "Metoprolol",
+    "suppliers": "ACI",
+    "stock": "16",
+    "price": "62.75",
+    "category": "Hand"
+  },
+  {
+    "id": "44",
+    "photo": "/assets/products/44.svg?v=1",
+    "name": "Amlodipine",
+    "suppliers": "Uniliver",
+    "stock": "10",
+    "price": "47.34",
+    "category": "Leg"
+  },
+  {
+    "id": "45",
+    "photo": "/assets/products/45.svg?v=1",
+    "name": "Citalopram",
+    "suppliers": "Square",
+    "stock": "18",
+    "price": "85.99",
+    "category": "Medicine"
+  },
+  {
+    "id": "46",
+    "photo": "/assets/products/46.svg?v=1",
+    "name": "Metronidazole",
+    "suppliers": "Acme",
+    "stock": "7",
+    "price": "42.75",
+    "category": "Heart"
+  },
+  {
+    "id": "47",
+    "photo": "/assets/products/47.svg?v=1",
+    "name": "Carvedilol",
+    "suppliers": "Beximco",
+    "stock": "13",
+    "price": "69.99",
+    "category": "Head"
+  },
+  {
+    "id": "48",
+    "photo": "/assets/products/48.svg?v=1",
+    "name": "Clopidogrel",
+    "suppliers": "ACI",
+    "stock": "21",
+    "price": "54.88",
+    "category": "Hand"
+  },
+  {
+    "id": "49",
+    "photo": "/assets/products/49.svg?v=1",
+    "name": "Levothyroxine",
+    "suppliers": "Uniliver",
+    "stock": "12",
+    "price": "98.45",
+    "category": "Leg"
+  },
+  {
+    "id": "50",
+    "photo": "/assets/products/50.svg?v=1",
+    "name": "Ramipril",
+    "suppliers": "Square",
+    "stock": "19",
+    "price": "37.99",
+    "category": "Medicine"
+  },
+  {
+    "id": "51",
+    "photo": "/assets/products/51.svg?v=1",
+    "name": "Amitriptyline",
+    "suppliers": "Acme",
+    "stock": "11",
+    "price": "76.75",
+    "category": "Heart"
+  },
+  {
+    "id": "52",
+    "photo": "/assets/products/52.svg?v=1",
+    "name": "Losartan",
+    "suppliers": "Beximco",
+    "stock": "14",
+    "price": "62.88",
+    "category": "Head"
+  },
+  {
+    "id": "53",
+    "photo": "/assets/products/53.svg?v=1",
+    "name": "Montelukast",
+    "suppliers": "ACI",
+    "stock": "9",
+    "price": "47.45",
+    "category": "Hand"
+  },
+  {
+    "id": "54",
+    "photo": "/assets/products/54.svg?v=1",
+    "name": "Hydrochlorothiazide",
+    "suppliers": "Uniliver",
+    "stock": "10",
+    "price": "58.99",
+    "category": "Leg"
+  },
+  {
+    "id": "55",
+    "photo": "/assets/products/55.svg?v=1",
+    "name": "Meloxicam",
+    "suppliers": "Square",
+    "stock": "16",
+    "price": "84.75",
+    "category": "Medicine"
+  },
+  {
+    "id": "56",
+    "photo": "/assets/products/56.svg?v=1",
+    "name": "Amlodipine",
+    "suppliers": "Acme",
+    "stock": "18",
+    "price": "49.88",
+    "category": "Heart"
+  },
+  {
+    "id": "57",
+    "photo": "/assets/products/57.svg?v=1",
+    "name": "Citalopram",
+    "suppliers": "Beximco",
+    "stock": "20",
+    "price": "72.99",
+    "category": "Head"
+  },
+  {
+    "id": "58",
+    "photo": "/assets/products/58.svg?v=1",
+    "name": "Atorvastatin",
+    "suppliers": "ACI",
+    "stock": "12",
+    "price": "65.45",
+    "category": "Hand"
+  },
+  {
+    "id": "59",
+    "photo": "/assets/products/59.svg?v=1",
+    "name": "Warfarin",
+    "suppliers": "Uniliver",
+    "stock": "7",
+    "price": "59.88",
+    "category": "Leg"
+  }
+]
