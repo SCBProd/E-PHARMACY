@@ -25,6 +25,10 @@ Requirements: Node.js 20 or newer. MongoDB is optional for browsing the seeded s
 
 The API inserts the storefront seed data into empty collections when it connects. To seed the supplied administrative records as well, run `npm run seed` once. The seed command only fills empty collections; it does not overwrite existing records. The customer and order examples in `server/data` are anonymized. If you have the original local datasets, put them in `server/private-data/customers.json` and `server/private-data/orders.json`; that directory is ignored by Git, and the seed command uses those files on your computer without including them in a repository.
 
+## Deploy to Vercel
+
+The root `vercel.json` configures two Vercel Services: the Vite client and the Express API. Select **Services** as the Vercel project's framework. The client receives `/`; requests under `/api/` are routed to the server, which keeps its existing `/api/...` routes. The client uses same-origin `/api` requests, so a service binding is not needed. Set `MONGODB_URI` and a strong `JWT_SECRET` in the Vercel project's environment variables before deploying.
+
 ## Project layout
 
 - `client/src/App.jsx` — routes, pages, forms, cart, and API integration.
