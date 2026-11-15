@@ -1,6 +1,13 @@
 # E-Pharmacy
 
-Client storefront and Express API for the E-Pharmacy Figma design.
+Responsive E-Pharmacy storefront built from the supplied Figma design and project requirements.
+
+## Technologies
+
+- Client: React, TypeScript, Vite, React Router, Formik, Yup, and Recharts.
+- API: Node.js, Express, and MongoDB with Mongoose.
+- Design: [Figma](https://www.figma.com/design/pwRXd2xSEHFLUWNbWYxTVT/E-PHARMACY--clients---Copy-).
+- Requirements: the supplied E-Pharmacy client technical specification and the project criteria for responsive UI, validated forms, statistics, and deployment.
 
 ## Start locally
 
@@ -31,7 +38,10 @@ The root `vercel.json` configures two Vercel Services: the Vite client and the E
 
 ## Project layout
 
-- `client/src/App.jsx` — routes, pages, forms, cart, and API integration.
+- `client/src/App.tsx` — typed routes, pages, validated forms, cart, and API integration.
+- `client/src/main.tsx` — TypeScript client entry point.
+- `client/src/types.ts` — shared TypeScript domain and context types.
+- `client/tsconfig.json` — client TypeScript configuration.
 - `client/src/styles.css` — responsive Figma-based styling.
 - `client/public/assets/figma` — locally saved Figma-exported assets.
 - `client/src/data` — client fallback data for products, stores, and reviews.
