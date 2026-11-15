@@ -27,7 +27,7 @@ The API inserts the storefront seed data into empty collections when it connects
 
 ## Deploy to Vercel
 
-The root `vercel.json` configures two Vercel Services: the Vite client and the Express API. Select **Services** as the Vercel project's framework. The client receives `/`; requests under `/api/` are routed to the server, which keeps its existing `/api/...` routes. The client uses same-origin `/api` requests, so a service binding is not needed. Set `MONGODB_URI` and a strong `JWT_SECRET` in the Vercel project's environment variables before deploying.
+The root `vercel.json` configures two Vercel Services: the Vite client and the Express API. Select **Services** as the Vercel project's framework. The client receives `/`; requests under `/api/` are routed to the server, which keeps its existing `/api/...` routes. The client uses same-origin `/api` requests, so a service binding is not needed. Set `MONGODB_URI` to a hosted MongoDB connection string (for example, MongoDB Atlas) and a strong `JWT_SECRET` in the Vercel project's environment variables before deploying. MongoDB Compass is a desktop client; a local `mongodb://127.0.0.1:27017/...` address works only on your computer and cannot be reached by Vercel. After configuring the variables, redeploy and check `/api/health` for `database: "connected"`.
 
 ## Project layout
 

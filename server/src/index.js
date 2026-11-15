@@ -15,8 +15,10 @@ const PORT = process.env.PORT || 4000;
 app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173' }));
 app.use(express.json({ limit: '1mb' }));
 const money = (n) => Number(n || 0);
-const tokenFor = (user) => jwt.sign({ id: user._id }, process.env.JWT_SECRET || 'dev-only-change-this-secret', { expiresIn: '7d' });
+const jwtSecret = () => process.env.JWT_SECRET || (process.env.NODE_ENV === 'production' ? null : 'dev-only-change-this-secret');
+const tokenFor = (user) => jwt.sign({ id: user._id }, jwtSecret(), { expiresIn: '7d' });
 const mongoReady = () => mongoose.connection.readyState === 1;
+let mongoInitialization;
 const fallbackStores = pharmacies.map((store, i) => ({ ...store, id: String(i), rating: money(store.rating), nearest: nearest.some((item) => item.name === store.name && item.address === store.address) || i < 6, status: i % 4 === 2 ? 'CLOSE' : 'OPEN' }));
 const emailPattern = /^\S+@\S+\.\S+$/;
 const phonePattern = /^\+?[\d\s().-]{7,20}$/;
@@ -66,17 +68,47 @@ async function ensureSeed() {
   if (!(await Review.exists())) await Review.insertMany(reviews);
 }
 
+async function initializeMongo() {
+  if (mongoReady()) return true;
+  if (!process.env.MONGODB_URI) return false;
+  if (!mongoInitialization) {
+    mongoInitialization = mongoose.connect(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 10000 })
+      .then(async () => {
+        await ensureSeed();
+        console.log('MongoDB connected; seed data ready.');
+        return true;
+      })
+      .catch((error) => {
+        console.error('MongoDB connection failed:', error.message);
+        mongoInitialization = undefined;
+        return false;
+      });
+  }
+  return mongoInitialization;
+}
+
+app.use(async (_req, _res, next) => {
+  await initializeMongo();
+  next();
+});
+
 async function auth(req, res, next) {
   if (!mongoReady()) return res.status(503).json({ message: 'Authentication and cart require a configured MongoDB connection.' });
+  const secret = jwtSecret();
+  if (!secret) return res.status(503).json({ message: 'JWT_SECRET is not configured on the server.' });
   const value = req.headers.authorization?.replace(/^Bearer\s+/i, '');
   if (!value) return res.status(401).json({ message: 'Please log in to continue.' });
-  try { const payload = jwt.verify(value, process.env.JWT_SECRET || 'dev-only-change-this-secret'); req.user = await User.findById(payload.id); if (!req.user) return res.status(401).json({ message: 'Session expired. Please log in again.' }); next(); }
+  try { const payload = jwt.verify(value, secret); req.user = await User.findById(payload.id); if (!req.user) return res.status(401).json({ message: 'Session expired. Please log in again.' }); next(); }
   catch { return res.status(401).json({ message: 'Session expired. Please log in again.' }); }
 }
 
-app.get('/api/health', (_req, res) => res.json({ ok: true, database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected' }));
+app.get('/api/health', (_req, res) => {
+  const connected = mongoReady();
+  res.status(connected ? 200 : 503).json({ ok: connected, database: connected ? 'connected' : 'disconnected', databaseConfigured: Boolean(process.env.MONGODB_URI), authConfigured: Boolean(jwtSecret()) });
+});
 app.post('/api/user/register', async (req, res, next) => {
   if (!mongoReady()) return res.status(503).json({ message: 'Registration requires a configured MongoDB connection.' });
+  if (!jwtSecret()) return res.status(503).json({ message: 'JWT_SECRET is not configured on the server.' });
   try {
     const { name, email, phone, password } = req.body;
     if (!name?.trim() || name.trim().length < 2 || name.trim().length > 80 || !emailPattern.test(email || '') || !phonePattern.test(phone || '') || !strongPasswordPattern.test(password || '')) return res.status(400).json({ message: 'Enter a valid name, email, phone number and a password of at least 8 characters with a special character.' });
@@ -87,6 +119,7 @@ app.post('/api/user/register', async (req, res, next) => {
 });
 app.post('/api/user/login', async (req, res, next) => {
   if (!mongoReady()) return res.status(503).json({ message: 'Login requires a configured MongoDB connection.' });
+  if (!jwtSecret()) return res.status(503).json({ message: 'JWT_SECRET is not configured on the server.' });
   try { const email = String(req.body.email || '').toLowerCase(); const password = String(req.body.password || ''); if (!emailPattern.test(email) || !password) return res.status(400).json({ message: 'Enter a valid email address and password.' }); const user = await User.findOne({ email }); if (!user || !await bcrypt.compare(password, user.passwordHash)) return res.status(401).json({ message: 'Email or password is incorrect.' }); res.json({ token: tokenFor(user), user: { id: user.id, name: user.name, email: user.email } }); } catch (e) { next(e); }
 });
 app.get('/api/user/logout', auth, (_req, res) => res.json({ message: 'Logged out.' }));
@@ -140,8 +173,12 @@ app.delete('/api/cart/:productId', auth, async (req, res, next) => { try { const
 app.post('/api/cart/checkout', auth, async (req, res, next) => { try { const { name, email, phone, address, paymentMethod } = req.body; const cleanName = String(name || '').trim(), cleanEmail = String(email || '').trim().toLowerCase(), cleanPhone = String(phone || '').trim(), cleanAddress = String(address || '').trim(); if (cleanName.length < 2 || cleanName.length > 80 || !emailPattern.test(cleanEmail) || !phonePattern.test(cleanPhone) || cleanAddress.length < 5 || cleanAddress.length > 300 || !['Cash On Delivery', 'Bank'].includes(paymentMethod)) return res.status(400).json({ message: 'Enter valid shipping details and select a payment method.' }); await req.user.populate('cart.product'); if (!req.user.cart.length) return res.status(400).json({ message: 'Your cart is empty.' }); const products = req.user.cart.map((x) => ({ product: x.product.id, name: x.product.name, photo: x.product.photo, unitPrice: x.product.price, quantity: x.quantity })); const order = await Order.create({ user: req.user.id, name: cleanName, email: cleanEmail, phone: cleanPhone, address: cleanAddress, paymentMethod, products, total: products.reduce((s, x) => s + x.unitPrice * x.quantity, 0) }); req.user.cart = []; await req.user.save(); res.status(201).json(order); } catch (e) { next(e); } });
 
 app.use((err, _req, res, _next) => { console.error(err); res.status(err.status || 500).json({ message: err.status ? err.message : 'Something went wrong. Please try again.' }); });
-app.listen(PORT, async () => {
-  try { if (process.env.MONGODB_URI) { await mongoose.connect(process.env.MONGODB_URI); await ensureSeed(); console.log(`MongoDB connected; seed data ready.`); } else console.log('MONGODB_URI is not set; API needs MongoDB for persistence.'); }
-  catch (e) { console.error('MongoDB connection failed:', e.message); }
-  console.log(`E-Pharmacy API listening on ${PORT}`);
-});
+
+export default app;
+
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    console.log(`E-Pharmacy API listening on ${PORT}`);
+    void initializeMongo();
+  });
+}
